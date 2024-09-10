@@ -22,10 +22,12 @@ class SUMOAPI:
         self.traffic_light_ids = traci.trafficlight.getIDList()
         self.step = 0
         self.max_step = max_step
+        self.state = None  #Initial state
 
 
-    def transform_to_next_state(self, *args)->torch.Tensor:
+    def transform_to_next_state(self, action)->torch.Tensor:
         try:
+            self.perform_action(action)
             traci.simulationStep()
             # To-do: Code get_state() 
             self.state = self.get_state()
@@ -39,25 +41,41 @@ class SUMOAPI:
             sys.exit(1)
 
     def get_state(self, *args)->torch.Tensor:
-        return 
+        states = []
+        for tls in self.traffic_light_ids:
+            controlled_lanes = traci.trafficlight.getControlledLanes(tls)
+            for lane in controlled_lanes:
+                queue_length = traci.lane.getLastStepHaltingNumber(lane)
+                density = traci.lane.getLastStepOccupancy(lane)
+                states.append([queue_length, density])
+
+            current_phase = traci.trafficlight.getPhase(tls)
+            num_phases = traci.trafficlight.getPhaseNumber(tls)
+            phase_one_hot = [1 if i == current_phase else 0 for i in range(num_phases)]
+            states.append(phase_one_hot)
+
+        return torch.tensor(states, dtype=torch.float32)
 
     def compute_reward(self, state, *args)->torch.Tensor:
-        return
+        queue_lengths = state[:, 0]
+        total_queue_length = torch.sum(queue_lengths)
+        reward = -total_queue_length**2
+        return reward
 
 
     def perform_action(self, action) -> list[torch.Tensor, torch.Tensor]:
         '''
         Perform an action and return next state, reward
         '''
-        if self.step < self.max_step:
-            # To-do: Code transform_to_next_state(), compute_reward()
-            next_state = self.transform_to_next_state(action)
-            reward = self.compute_reward(action)
-            return next_state, reward
-
-        else:
-            print("Reached termination!")
-
+        for tls in self.traffic_light_ids:
+            if action == 0:
+                traci.trafficlight.setPhase(tls, 0) #đèn xanh hướng B-N
+            elif action == 1:
+                traci.trafficlight.setPhase(tls, 1) #đèn xanh hướng Đ-T
+            elif action == 2:
+                traci.trafficlight.setPhase(tls, 2) #đèn xanh rẽ phải hướng B-N
+            elif action == 3:
+                traci.trafficlight.setPhase(tls, 3) #đèn xanh rẽ phải hướng Đ-T
 
 if __name__ == "__main__":
     print('Running demo!')
