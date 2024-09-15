@@ -1,8 +1,0 @@
-Warning: Program '0' at tlLogic 'joinedS_cluster_1755146736_1755146742_1755146754_1755146759_#1more_cluster_1755146784_1755146806_6601172987_cluster_5716457434_6601256800_8040029480' is incompatible with logic at junction 'cluster_1755146736_1755146742_1755146754_1755146759_#1more' (mutual conflict between link indices 4,11 tl indices 4,11 phase 0).
-  To avoid deadlock/collisions, either: rebuild the signal plan with a newer version of netconvert/netedit
-  or rebuild the network with option '--tls.ignore-internal-junction-jam' or include the program when building.
-Warning: Program '0' at tlLogic 'joinedS_cluster_1755146736_1755146742_1755146754_1755146759_#1more_cluster_1755146784_1755146806_6601172987_cluster_5716457434_6601256800_8040029480' is incompatible with logic at junction 'cluster_1755146784_1755146806_6601172987' (mutual conflict between link indices 10,12 tl indices 48,50 phase 0).
-  To avoid deadlock/collisions, either: rebuild the signal plan with a newer version of netconvert/netedit
-  or rebuild the network with option '--tls.ignore-internal-junction-jam' or include the program when building.
-Warning: At actuated tlLogic 'joinedS_cluster_1755146736_1755146742_1755146754_1755146759_#1more_cluster_1755146784_1755146806_6601172987_cluster_5716457434_6601256800_8040029480', linkIndex 47,48,68,69 has no controlling detector.
-Warning: At actuated tlLogic 'joinedS_cluster_2294400839_5700934798_6601329311_6601329312_cluster_6413516253_6601329314', linkIndex 19 has no controlling detector.

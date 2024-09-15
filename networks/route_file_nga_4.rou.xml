@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2024-09-08 15:49:11 by Eclipse SUMO netedit Version 1.20.0
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <!-- Vehicles, persons and containers (sorted by depart) -->
+    <flow id="f_0" begin="0.00" from="E0" to="-E7" end="1000.00" vehsPerHour="1800"/>
+    <flow id="f_1" begin="0.00" from="E0" to="-E3" end="1000.00" vehsPerHour="1800"/>
+    <flow id="f_10" begin="0.00" from="E4" to="-E0" end="1000.00" vehsPerHour="1800"/>
+    <flow id="f_11" begin="0.00" from="E4" to="-E3" end="1000.00" vehsPerHour="1800"/>
+    <flow id="f_12" begin="0.00" from="E4" to="-E18" end="1000.00" vehsPerHour="1800"/>
+    <flow id="f_13" begin="0.00" from="E4" to="-E7" end="1000.00" vehsPerHour="1800"/>
+    <flow id="f_14" begin="0.00" from="E4" to="-E10" end="1000.00" vehsPerHour="1800"/>
+    <flow id="f_15" begin="0.00" from="E7" to="-E10" end="1000.00" vehsPerHour="1800"/>
+    <flow id="f_16" begin="0.00" from="E7" to="-E18" end="1000.00" vehsPerHour="1800"/>
+    <flow id="f_17" begin="0.00" from="E7" to="-E0" end="1000.00" vehsPerHour="1800"/>
+    <flow id="f_18" begin="0.00" from="E7" to="-E3" end="1000.00" vehsPerHour="1800"/>
+    <flow id="f_19" begin="0.00" from="E7" to="-E4" end="1000.00" vehsPerHour="1800"/>
+    <flow id="f_2" begin="0.00" from="E0" to="-E4" end="1000.00" vehsPerHour="1800"/>
+    <flow id="f_20" begin="0.00" from="E10" to="-E7" end="1000.00" vehsPerHour="1800"/>
+    <flow id="f_21" begin="0.00" from="E10" to="-E18" end="1000.00" vehsPerHour="1800"/>
+    <flow id="f_22" begin="0.00" from="E10" to="-E0" end="1000.00" vehsPerHour="1800"/>
+    <flow id="f_23" begin="0.00" from="E10" to="-E4" end="1000.00" vehsPerHour="1800"/>
+    <flow id="f_24" begin="0.00" from="E10" to="-E3" end="1000.00" vehsPerHour="1800"/>
+    <flow id="f_25" begin="0.00" from="E18" to="-E7" end="1000.00" vehsPerHour="1800"/>
+    <flow id="f_26" begin="0.00" from="E18" to="-E10" end="1000.00" vehsPerHour="1800"/>
+    <flow id="f_27" begin="0.00" from="E18" to="-E0" end="1000.00" vehsPerHour="1800"/>
+    <flow id="f_28" begin="0.00" from="E18" to="-E3" end="1000.00" vehsPerHour="1800"/>
+    <flow id="f_29" begin="0.00" from="E18" to="-E4" end="1000.00" vehsPerHour="1800"/>
+    <flow id="f_3" begin="0.00" from="E0" to="-E10" end="1000.00" vehsPerHour="1800"/>
+    <flow id="f_30" type="DEFAULT_BIKETYPE" begin="0.00" from="E0" to="-E3" end="1000.00" vehsPerHour="1800"/>
+    <flow id="f_31" type="DEFAULT_BIKETYPE" begin="0.00" from="E0" to="-E4" end="1000.00" vehsPerHour="1800"/>
+    <flow id="f_32" type="DEFAULT_BIKETYPE" begin="0.00" from="E0" to="-E18" end="1000.00" vehsPerHour="1800"/>
+    <flow id="f_33" type="DEFAULT_BIKETYPE" begin="0.00" from="E0" to="-E10" end="1000.00" vehsPerHour="1800"/>
+    <flow id="f_34" type="DEFAULT_BIKETYPE" begin="0.00" from="E0" to="-E7" end="1000.00" vehsPerHour="1800"/>
+    <flow id="f_35" type="DEFAULT_BIKETYPE" begin="0.00" from="E3" to="-E4" end="1000.00" vehsPerHour="1800"/>
+    <flow id="f_36" type="DEFAULT_BIKETYPE" begin="0.00" from="E3" to="-E0" end="1000.00" vehsPerHour="1800"/>
+    <flow id="f_37" type="DEFAULT_BIKETYPE" begin="0.00" from="E3" to="-E18" end="1000.00" vehsPerHour="1800"/>
+    <flow id="f_38" type="DEFAULT_BIKETYPE" begin="0.00" from="E3" to="-E10" end="1000.00" vehsPerHour="1800"/>
+    <flow id="f_39" type="DEFAULT_BIKETYPE" begin="0.00" from="E3" to="-E7" end="1000.00" vehsPerHour="1800"/>
+    <flow id="f_4" begin="0.00" from="E0" to="-E18" end="1000.00" vehsPerHour="1800"/>
+    <flow id="f_40" type="DEFAULT_BIKETYPE" begin="0.00" from="E4" to="-E3" end="1000.00" vehsPerHour="1800"/>
+    <flow id="f_41" type="DEFAULT_BIKETYPE" begin="0.00" from="E4" to="-E0" end="1000.00" vehsPerHour="1800"/>
+    <flow id="f_42" type="DEFAULT_BIKETYPE" begin="0.00" from="E4" to="-E18" end="1000.00" vehsPerHour="1800"/>
+    <flow id="f_43" type="DEFAULT_BIKETYPE" begin="0.00" from="E4" to="-E7" end="1000.00" vehsPerHour="1800"/>
+    <flow id="f_44" type="DEFAULT_BIKETYPE" begin="0.00" from="E4" to="-E10" end="1000.00" vehsPerHour="1800"/>
+    <flow id="f_45" type="DEFAULT_BIKETYPE" begin="0.00" from="E7" to="-E10" end="1000.00" vehsPerHour="1800"/>
+    <flow id="f_46" type="DEFAULT_BIKETYPE" begin="0.00" from="E7" to="-E18" end="1000.00" vehsPerHour="1800"/>
+    <flow id="f_47" type="DEFAULT_BIKETYPE" begin="0.00" from="E7" to="-E0" end="1000.00" vehsPerHour="1800"/>
+    <flow id="f_48" type="DEFAULT_BIKETYPE" begin="0.00" from="E7" to="-E4" end="1000.00" vehsPerHour="1800"/>
+    <flow id="f_49" type="DEFAULT_BIKETYPE" begin="0.00" from="E7" to="-E3" end="1000.00" vehsPerHour="1800"/>
+    <flow id="f_5" begin="0.00" from="E3" to="-E4" end="1000.00" vehsPerHour="1800"/>
+    <flow id="f_50" type="DEFAULT_BIKETYPE" begin="0.00" from="E10" to="-E18" end="1000.00" vehsPerHour="1800"/>
+    <flow id="f_51" type="DEFAULT_BIKETYPE" begin="0.00" from="E10" to="-E7" end="1000.00" vehsPerHour="1800"/>
+    <flow id="f_52" type="DEFAULT_BIKETYPE" begin="0.00" from="E10" to="-E0" end="1000.00" vehsPerHour="1800"/>
+    <flow id="f_53" type="DEFAULT_BIKETYPE" begin="0.00" from="E10" to="-E3" end="1000.00" vehsPerHour="1800"/>
+    <flow id="f_54" type="DEFAULT_BIKETYPE" begin="0.00" from="E10" to="-E4" end="1000.00" vehsPerHour="1800"/>
+    <flow id="f_55" type="DEFAULT_BIKETYPE" begin="0.00" from="E18" to="-E7" end="1000.00" vehsPerHour="1800"/>
+    <flow id="f_56" type="DEFAULT_BIKETYPE" begin="0.00" from="E18" to="-E0" end="1000.00" vehsPerHour="1800"/>
+    <flow id="f_57" type="DEFAULT_BIKETYPE" begin="0.00" from="E18" to="-E10" end="1000.00" vehsPerHour="1800"/>
+    <flow id="f_58" type="DEFAULT_BIKETYPE" begin="0.00" from="E18" to="-E3" end="1000.00" vehsPerHour="1800"/>
+    <flow id="f_59" type="DEFAULT_BIKETYPE" begin="0.00" from="E18" to="-E4" end="1000.00" vehsPerHour="1800"/>
+    <flow id="f_6" begin="0.00" from="E3" to="-E0" end="1000.00" vehsPerHour="1800"/>
+    <flow id="f_7" begin="0.00" from="E3" to="-E18" end="1000.00" vehsPerHour="1800"/>
+    <flow id="f_8" begin="0.00" from="E3" to="-E10" end="1000.00" vehsPerHour="1800"/>
+    <flow id="f_9" begin="0.00" from="E3" to="-E7" end="1000.00" vehsPerHour="1800"/>
+</routes>

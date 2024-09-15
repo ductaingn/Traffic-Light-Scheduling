@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2024-09-10 18:57:56 by Eclipse SUMO netedit Version 1.20.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/neteditConfiguration.xsd">
+
+    <input>
+        <sumocfg-file value="C:\Users\legion\code_nga_4\sumo_config_file_nga_4.sumocfg"/>
+        <additional-files value=""/>
+        <route-files value="C:\Users\legion\code_nga_4\route_file_nga_4.rou.xml"/>
+        <sumo-net-file value="C:\Users\legion\ngã 4 new\network file.net.xml"/>
+    </input>
+
+    <processing>
+        <geometry.min-radius.fix.railways value="false"/>
+        <geometry.max-grade.fix value="false"/>
+        <offset.disable-normalization value="true"/>
+        <lefthand value="0"/>
+    </processing>
+
+    <junctions>
+        <no-turnarounds value="true"/>
+        <junctions.corner-detail value="5"/>
+        <junctions.limit-turn-speed value="5.50"/>
+        <rectangular-lane-cut value="0"/>
+    </junctions>
+
+    <pedestrian>
+        <walkingareas value="0"/>
+    </pedestrian>
+
+    <netedit>
+        <ignore.routeelements value="false"/>
+    </netedit>
+
+</configuration>
+-->
+
+<edges version="1.20" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/edges_file.xsd">
+    <edge id="-E0" from="J10" to="J0" priority="-1" numLanes="2" speed="13.89"/>
+    <edge id="-E1" from="J14" to="J1" priority="-1" numLanes="2" speed="13.89"/>
+    <edge id="-E10" from="J9" to="J17" priority="-1" numLanes="2" speed="13.89"/>
+    <edge id="-E11" from="J11" to="J10" priority="-1" numLanes="2" speed="13.89"/>
+    <edge id="-E12" from="J12" to="J11" priority="-1" numLanes="2" speed="13.89"/>
+    <edge id="-E13" from="J13" to="J12" priority="-1" numLanes="2" speed="13.89"/>
+    <edge id="-E14" from="J14" to="J13" priority="-1" numLanes="2" speed="13.89"/>
+    <edge id="-E15" from="J11" to="J15" priority="-1" numLanes="2" speed="13.89"/>
+    <edge id="-E16" from="J16" to="J11" priority="-1" numLanes="2" speed="13.89"/>
+    <edge id="-E17" from="J1" to="J18" priority="-1" numLanes="2" speed="13.89"/>
+    <edge id="-E18" from="J18" to="J19" priority="-1" numLanes="2" speed="13.89"/>
+    <edge id="-E3" from="J15" to="J3" priority="-1" numLanes="2" speed="13.89"/>
+    <edge id="-E4" from="J16" to="J4" priority="-1" numLanes="2" speed="13.89"/>
+    <edge id="-E7" from="J8" to="J7" priority="-1" numLanes="2" speed="13.89"/>
+    <edge id="-E8" from="J1" to="J8" priority="-1" numLanes="2" speed="13.89"/>
+    <edge id="-E9" from="J1" to="J9" priority="-1" numLanes="2" speed="13.89"/>
+    <edge id="E0" from="J0" to="J10" priority="-1" numLanes="2" speed="13.89"/>
+    <edge id="E1" from="J1" to="J14" priority="-1" numLanes="2" speed="13.89"/>
+    <edge id="E10" from="J17" to="J9" priority="-1" numLanes="2" speed="13.89"/>
+    <edge id="E11" from="J10" to="J11" priority="-1" numLanes="2" speed="13.89"/>
+    <edge id="E12" from="J11" to="J12" priority="-1" numLanes="2" speed="13.89"/>
+    <edge id="E13" from="J12" to="J13" priority="-1" numLanes="2" speed="13.89"/>
+    <edge id="E14" from="J13" to="J14" priority="-1" numLanes="2" speed="13.89"/>
+    <edge id="E15" from="J15" to="J11" priority="-1" numLanes="2" speed="13.89"/>
+    <edge id="E16" from="J11" to="J16" priority="-1" numLanes="2" speed="13.89"/>
+    <edge id="E17" from="J18" to="J1" priority="-1" numLanes="2" speed="13.89"/>
+    <edge id="E18" from="J19" to="J18" priority="-1" numLanes="2" speed="13.89"/>
+    <edge id="E3" from="J3" to="J15" priority="-1" numLanes="2" speed="13.89"/>
+    <edge id="E4" from="J4" to="J16" priority="-1" numLanes="2" speed="13.89"/>
+    <edge id="E7" from="J7" to="J8" priority="-1" numLanes="2" speed="13.89"/>
+    <edge id="E8" from="J8" to="J1" priority="-1" numLanes="2" speed="13.89"/>
+    <edge id="E9" from="J9" to="J1" priority="-1" numLanes="2" speed="13.89"/>
+</edges>
