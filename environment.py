@@ -102,7 +102,7 @@ class SUMOAPI:
 
 if __name__ == "__main__":
     print('Running demo!')
-    path_sumo_cfg = 'networks/double.sumocfg'
+    path_sumo_cfg = 'networks/sumo config.sumocfg'
     sumo = SUMOAPI(path_sumo_cfg)
 
     # Test environment
