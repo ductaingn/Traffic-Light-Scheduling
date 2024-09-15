@@ -25,24 +25,28 @@ class SUMOAPI:
         self.state = None  #Initial state
 
 
-    def transform_to_next_state(self, action)->torch.Tensor:
+    def transform_to_next_state(self, action) -> torch.Tensor:
         try:
             print(f"State before action: {self.state}")
             self.perform_action(action)
-
-            # To-do: Code get_state() 
-            self.state  = self.get_state()
-            print(f"State after action: {self.state }")
             self.step += 1
             print(f"Step {self.step}: Simulation running.")
-            return self.state 
+
+            if self.step >= self.max_step:
+                print('Maximum simulation steps reached. Resetting simulation.')
+                self.reset()
+                return self.state
+
+            self.state = self.get_state()
+            print(f"State after action: {self.state}")
+            return self.state
         
         except Exception as e:
             print(f"Error during simulation step: {e}")
             traci.close()
             sys.exit(1)
 
-    def get_state(self, *args)->torch.Tensor:
+    def get_state(self, *args) -> torch.Tensor:
         states = []
         for tls in self.traffic_light_ids:
             controlled_lanes = traci.trafficlight.getControlledLanes(tls)
@@ -72,37 +76,18 @@ class SUMOAPI:
         '''
         for tls in self.traffic_light_ids:
             if action == 0:
-                traci.trafficlight.setPhase(tls, 0)  # Đèn xanh hướng B-N
-                traci.simulationStep()  
-
-                traci.trafficlight.setPhase(tls, 4)  # Pha đèn vàng hướng B-N
-                for _ in range(3):  
-                    traci.simulationStep()
+                traci.trafficlight.setPhase(tls, 0)  # Đèn xanh hướng Bắc-Nam
             elif action == 1:
-                traci.trafficlight.setPhase(tls, 1)  # Đèn xanh hướng Đ-T
-                traci.simulationStep()  
-            
-                traci.trafficlight.setPhase(tls, 5) 
-                for _ in range(3):  
-                    traci.simulationStep()
+                traci.trafficlight.setPhase(tls, 1)  # Đèn xanh hướng Đông-Tây
             elif action == 2:
-                traci.trafficlight.setPhase(tls, 2)  # Đèn xanh rẽ trái hướng B-N
-                traci.simulationStep()  
-            
-                traci.trafficlight.setPhase(tls, 6)  
-                for _ in range(3):  
-                    traci.simulationStep()
+                traci.trafficlight.setPhase(tls, 2)  # Đèn xanh rẽ trái hướng Bắc-Nam
             elif action == 3:
-                traci.trafficlight.setPhase(tls, 3)  # Đèn xanh rẽ trái hướng Đ-T
-                traci.simulationStep() 
-        
-                traci.trafficlight.setPhase(tls, 7) 
-                for _ in range(3): 
-                    traci.simulationStep()
+                traci.trafficlight.setPhase(tls, 3)  # Đèn xanh rẽ trái hướng Đông-Tây
+            traci.simulationStep()
 
 if __name__ == "__main__":
     print('Running demo!')
-    path_sumo_cfg = 'networks/sumo config.sumocfg'
+    path_sumo_cfg = 'networks/osm.sumocfg'
     sumo = SUMOAPI(path_sumo_cfg)
 
     # Test environment
