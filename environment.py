@@ -46,7 +46,7 @@ class SUMOAPI:
             traci.close()
             sys.exit(1)
 
-    def get_state(self, *args) -> torch.Tensor:
+    def get_state(self, *args) -> torch.Tensor: 
         states = []
         for tls in self.traffic_light_ids:
             controlled_lanes = traci.trafficlight.getControlledLanes(tls)
@@ -55,11 +55,15 @@ class SUMOAPI:
                 density = traci.lane.getLastStepOccupancy(lane)
                 states.append([queue_length, density])
 
-            phases = traci.trafficlight.getCompleteRedYellowGreenDefinition(tls)
-            num_phases = len(phases[0].phases)
-            current_phase = traci.trafficlight.getPhase(tls)
-            phase_one_hot = [1 if i == current_phase else 0 for i in range(num_phases)]
-            states.append(phase_one_hot)
+            programs = traci.trafficlight.getAllProgramLogics(tls)
+            if programs:
+                num_phases = len(programs[0].phases)
+                current_phase = traci.trafficlight.getPhase(tls)
+                phase_one_hot = [1 if i == current_phase else 0 for i in range(num_phases)]
+                states.append(phase_one_hot)
+            else:
+                print(f"No programs found for traffic light {tls}.")
+                states.append([0]) 
 
         return torch.tensor(states, dtype=torch.float32)
 
@@ -83,7 +87,7 @@ class SUMOAPI:
                 traci.trafficlight.setPhase(tls, 2)  # Đèn xanh rẽ trái hướng Bắc-Nam
             elif action == 3:
                 traci.trafficlight.setPhase(tls, 3)  # Đèn xanh rẽ trái hướng Đông-Tây
-            traci.simulationStep()
+            traci.simulationStep()  
 
 if __name__ == "__main__":
     print('Running demo!')
